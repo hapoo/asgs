@@ -200,7 +200,7 @@ init_supermic()
   if [[ $operator = "jgflemin" ]]; then
      ADCIRCDIR=${HOME}/adcirc-cg/jasonfleming/v53release/work # ADCIRC executables
      SWANDIR=${HOME}/adcirc-cg/jasonfleming/v53release/swan   # SWAN executables
-     ACCOUNT=hpc_cera_2019
+     ACCOUNT=hpc_cera_2019b
      JOBENV=( gmt.sh gdal.sh imagemagick.sh )
      for script in $JOBENV; do
         source $JOBENVDIR/$script
@@ -655,7 +655,7 @@ writeTDSProperties()
    "lsu_ccr_tds")
       OPENDAPHOST=chenier.cct.lsu.edu
       THREDDSHOST=$OPENDAPHOST
-      OPENDDAPPORT=":8080"
+      OPENDAPPORT=":8080"
       CATALOGPREFIX=/asgs/ASGS-2019
       DOWNLOADPREFIX=/asgs/ASGS-2019
       OPENDAPBASEDIR=/data/thredds/ASGS/ASGS-2019
@@ -672,6 +672,7 @@ writeTDSProperties()
    "tacc_tds")
       OPENDAPHOST=adcircvis.tacc.utexas.edu
       THREDDSHOST=$OPENDAPHOST
+      OPENDAPPORT=":8080"
       DOWNLOADPREFIX=/asgs
       CATALOGPREFIX=/asgs
       OPENDAPBASEDIR=/corral-tacc/utexas/hurricane/ASGS
